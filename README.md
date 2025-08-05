@@ -1,1 +1,4 @@
 # date-format-validation
+This program is designed to read a list of dates from the user and only process the ones that are in a very specific format: "MonthName Day, Year" (for example, "March 1, 1990"). The goal is to take valid dates in this format and convert them into a simplified numeric format like 3-1-1990.
+
+I made a helper function called GetMonthAsInt() that just turns a month name like “March” into a number—so, like, 3. In the main() function, I keep reading lines until the user types -1. For each line, I’m checking if it has a space and a comma, because that’s kind of how you know it might be a valid date. If it does, I use substr() to grab the month (before the space), the day (between the space and comma), and the year (after the comma). Then I run the month through that helper function to get the number version. If everything checks out, I just print it out in number format. 
